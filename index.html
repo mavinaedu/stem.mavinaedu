@@ -33,13 +33,11 @@
             animation: gold-shimmer 4s linear infinite;
         }
         .arena-glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(56, 189, 248, 0.25); }
-        .real-qr-box, .aff-pr-qr-box { display: flex !important; align-items: center !important; justify-content: center !important; background: #ffffff !important; }
-        .real-qr-box img, .real-qr-box canvas, .aff-pr-qr-box img, .aff-pr-qr-box canvas { margin: 0 auto !important; display: block !important; max-width: 100% !important; max-height: 100% !important; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col customer-mode-active">
 
-    <!-- Top Header V2 -->
+    <!-- Top Header V3 -->
     <header class="bg-slate-950 text-white shadow-xl sticky top-0 z-40 no-print border-b border-sky-500/30">
         <div class="max-w-7xl mx-auto px-3 sm:px-5 py-2.5 sm:py-3">
             <div class="flex items-center justify-between gap-2.5">
@@ -50,9 +48,9 @@
                     <div class="min-w-0 flex-1">
                         <div class="flex flex-wrap items-center gap-1.5">
                             <button type="button" onclick="openVipUnlockModal()" class="cursor-pointer bg-amber-400 hover:bg-amber-300 text-slate-950 text-[10px] sm:text-[11px] font-black px-2.5 py-0.5 rounded-full border border-white shadow-sm transition">
-                                🔓 Dùng thử • 🔑 Nhập Mã VIP
+                                🔓 Nhập Mã Kích Hoạt VIP
                             </button>
-                            <span class="bg-sky-500/20 text-sky-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-sky-400/30">✦ MAVINA EDU STEM V2</span>
+                            <span class="bg-sky-500/20 text-sky-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-sky-400/30">✦ MAVINA EDU STEM V3.0</span>
                         </div>
                         <h1 class="hero-main-title-glow text-sm sm:text-xl md:text-2xl font-black tracking-tight mt-1 leading-tight">
                             STEM & AI HACKATHON • CẨM NANG THỰC CHIẾN & VIBE CODING
@@ -62,7 +60,7 @@
 
                 <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
                     <button type="button" onclick="switchTab('upsell')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-3.5 py-1.5 rounded-xl text-xs shadow transition">
-                        🛒 Sở Hữu Gói Ngay
+                        🛒 Nhận Gói Ưu Đãi
                     </button>
                 </div>
             </div>
@@ -73,19 +71,19 @@
                     🎴 Thẻ Tư Duy & Prompt AI
                 </button>
                 <button type="button" onclick="switchTab('quiz')" id="tabBtn-quiz" class="tab-nav-btn bg-slate-800 text-sky-300 font-extrabold px-3.5 py-2 rounded-xl text-xs transition">
-                    ⚡ Trắc Nghiệm Tình Huống Hackathon
+                    ⚡ Thử Thách Gỡ Rối Code
                 </button>
                 <button type="button" onclick="switchTab('infographic')" id="tabBtn-infographic" class="tab-nav-btn bg-slate-800 text-sky-300 font-extrabold px-3.5 py-2 rounded-xl text-xs transition">
-                    📊 Mindmap & Pitching Deck
+                    📊 Khung Slide Pitching 7 Bước
                 </button>
                 <button type="button" onclick="switchTab('library')" id="tabBtn-library" class="tab-nav-btn bg-slate-800 text-sky-300 font-extrabold px-3.5 py-2 rounded-xl text-xs transition">
-                    📚 Thư Viện & Xưởng In A4
+                    📚 Thư Viện Ebook & Xưởng In A4
                 </button>
                 <button type="button" onclick="switchTab('upsell')" id="tabBtn-upsell" class="tab-nav-btn bg-slate-800 text-sky-300 font-extrabold px-3.5 py-2 rounded-xl text-xs transition">
-                    🛒 Bảng Giá Gói Học
+                    🛒 Bảng Giá & Đặc Quyền
                 </button>
                 <button type="button" onclick="switchTab('affiliate')" id="tabBtn-affiliate" class="tab-nav-btn bg-slate-800 text-sky-300 font-extrabold px-3.5 py-2 rounded-xl text-xs transition">
-                    🤝 Chương Trình CTV
+                    🤝 Hợp Tác CTV (40%)
                 </button>
                 <button type="button" onclick="switchTab('lightarena')" id="tabBtn-lightarena" class="tab-nav-btn bg-gradient-to-r from-purple-600 to-pink-600 text-white font-black px-3.5 py-2 rounded-xl text-xs shadow-md border border-amber-300/50 transition">
                     🏆 Đấu Trường Hackathon
@@ -98,15 +96,15 @@
     <main class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-5 py-4 sm:py-6">
 
         <!-- ========================================== -->
-        <!-- TAB 1: THẺ TƯ DUY & PROMPT AI (THAY THẾ FLIP CARD TOÁN) -->
+        <!-- TAB 1: THẺ TƯ DUY & PROMPT AI CHUYÊN SÂU    -->
         <!-- ========================================== -->
         <section id="view-flashcards" class="space-y-4">
             <div class="bg-slate-900 border border-sky-500/30 p-4 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-3">
                 <div class="text-xs font-bold text-sky-200">
-                    💡 <strong>Thẻ Thực Chiến Hackathon:</strong> Chạm lật thẻ để xem phương pháp giải quyết vấn đề và copy lệnh <strong>Prompt AI</strong> dùng ngay lập tức.
+                    💡 <strong>Kho Thẻ Thực Chiến Hackathon:</strong> Chạm lật thẻ để xem phương pháp giải quyết vấn đề và copy lệnh <strong>Prompt AI</strong> dùng ngay lập tức cho đồ án.
                 </div>
                 <div class="flex gap-2">
-                    <button type="button" onclick="filterByPart('ALL')" class="part-btn bg-sky-600 text-white font-extrabold px-3 py-1.5 rounded-xl text-xs">Tất cả (52)</button>
+                    <button type="button" onclick="filterByPart('ALL')" class="part-btn bg-sky-600 text-white font-extrabold px-3 py-1.5 rounded-xl text-xs">Tất cả</button>
                     <button type="button" onclick="filterByPart('P1')" class="part-btn bg-slate-800 text-sky-200 font-bold px-3 py-1.5 rounded-xl text-xs">Phần I: Ý Tưởng</button>
                     <button type="button" onclick="filterByPart('P2')" class="part-btn bg-slate-800 text-sky-200 font-bold px-3 py-1.5 rounded-xl text-xs">Phần II: Vibe Coding</button>
                 </div>
@@ -115,7 +113,7 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- TAB 2: TRẮC NGHIỆM TÌNH HUỐNG HACKATHON     -->
+        <!-- TAB 2: THỬ THÁCH GỠ RỐI CODE (GAMIFICATION) -->
         <!-- ========================================== -->
         <section id="view-quiz" class="hidden max-w-2xl mx-auto">
             <div class="bg-slate-900 rounded-3xl shadow-lg border-2 border-sky-500/40 p-5 sm:p-7 text-white space-y-4">
@@ -129,15 +127,15 @@
 
                 <div id="quizStartScreen" class="bg-slate-950 border border-sky-700 rounded-2xl p-6 text-center space-y-3">
                     <div class="text-3xl">🚀</div>
-                    <h3 class="text-base font-black text-amber-300">SẴN SÀNG THỬ TÀI GIẢI QUYẾT TÌNH HUỐNG DỰ ÁN?</h3>
-                    <p class="text-xs text-sky-100 max-w-md mx-auto">Đối mặt với các sự cố lập trình thực tế và chọn giải pháp tối ưu cùng AI.</p>
+                    <h3 class="text-base font-black text-amber-300">SẴN SÀNG THỬ TÀI XỬ LÝ SỰ CỐ CÙNG AI?</h3>
+                    <p class="text-xs text-sky-100 max-w-md mx-auto">Vượt qua các thử thách gỡ rối mã nguồn thực tế thường gặp khi làm sản phẩm dự thi STEMPETITION.</p>
                     <button type="button" onclick="startQuizSessionNow()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-black px-6 py-2.5 rounded-xl text-xs">BẮT ĐẦU NGAY</button>
                 </div>
 
                 <div id="quizPlayArea" class="hidden space-y-3">
                     <div class="bg-slate-950 border border-sky-600 rounded-2xl p-4 space-y-2">
                         <span id="quizQuestionTag" class="bg-sky-600 text-white text-[10px] font-black px-2.5 py-0.5 rounded-full">Tình huống #1</span>
-                        <div id="quizPromptText" class="text-sm font-black text-amber-300">Khi AI viết code trang web bị lỗi hiển thị giao diện trên điện thoại (Mobile Responsive), bạn nên dùng prompt nào?</div>
+                        <div id="quizPromptText" class="text-sm font-black text-amber-300"></div>
                     </div>
                     <div id="quizOptionsContainer" class="space-y-2"></div>
                     <div id="quizFeedbackBox" class="hidden p-3 rounded-xl text-xs font-bold"></div>
@@ -147,24 +145,24 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- TAB 3: MINDMAP & PITCHING DECK             -->
+        <!-- TAB 3: KHUNG SLIDE PITCHING 7 BƯỚC         -->
         <!-- ========================================== -->
         <section id="view-infographic" class="hidden space-y-4">
             <div class="bg-slate-900 p-4 rounded-2xl border border-sky-500/30 flex justify-between items-center text-xs">
-                <span>📊 <strong>Cấu trúc Slide Pitching chuẩn quốc tế:</strong> Giúp học sinh tự tin bảo vệ đề tài trước Ban Giám Khảo[cite: 1, 3].</span>
+                <span>📊 <strong>Cấu trúc Slide Pitching chuẩn quốc tế:</strong> Giúp học sinh tự tin chinh phục Ban Giám Khảo[cite: 1, 3].</span>
                 <button type="button" onclick="window.print()" class="bg-amber-500 text-slate-950 font-black px-3 py-1.5 rounded-xl">In Poster A4</button>
             </div>
             <div id="infographicCaptureArea" class="max-w-4xl mx-auto bg-slate-950 border-4 border-sky-500 rounded-3xl p-6 text-white space-y-4">
                 <div class="bg-gradient-to-r from-slate-900 to-indigo-950 p-4 rounded-2xl border border-sky-500/40 text-center">
                     <h2 class="text-xl font-black text-sky-300">KHUNG PITCH DECK 7 SLIDE CHUẨN STEMPETITION</h2>
-                    <p class="text-xs text-sky-100 mt-1">Bí kíp thuyết phục hội đồng giám khảo trong 5 phút</p>
+                    <p class="text-xs text-sky-100 mt-1">Bí kíp thuyết phục hội đồng giám khảo chỉ trong 5 phút</p>
                 </div>
                 <div id="infographicBlocksGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
             </div>
         </section>
 
         <!-- ========================================== -->
-        <!-- TAB 4: THƯ VIỆN & XƯỞNG IN A4               -->
+        <!-- TAB 4: THƯ VIỆN EBOOK & XƯỞNG IN A4        -->
         <!-- ========================================== -->
         <section id="view-library" class="hidden space-y-4">
             <div class="bg-slate-900 p-4 rounded-2xl border border-sky-500/30 flex justify-between items-center text-xs">
@@ -175,53 +173,55 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- TAB 5: BẢNG GIÁ GÓI HỌC                    -->
+        <!-- TAB 5: BẢNG GIÁ & ĐẶC QUYỀN (GIÁ TRỊ VƯỢT TRỘI)-->
         <!-- ========================================== -->
         <section id="view-upsell" class="hidden space-y-6">
             <div class="bg-gradient-to-br from-slate-900 via-[#0f344d] to-indigo-950 text-white rounded-3xl p-6 sm:p-10 border-2 border-sky-500/40 shadow-2xl text-center space-y-4">
                 <span class="bg-amber-400 text-slate-950 text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider inline-block">
-                    ✦ ẤN PHẨM SỐ #2 • MAVINA EDU STEM & AI HACKATHON
+                    ✦ ĐẦU TƯ THÔNG MINH CHO TƯƠNG LAI CON EM • CHI PHÍ NHỎ, GIÁ TRỊ KHỔNG LỒ
                 </span>
                 <h2 class="text-2xl sm:text-4xl font-black leading-tight">
                     BIẾN Ý TƯỞNG THỰC TẾ THÀNH DỰ ÁN STEM TRIỆU ĐÔ <br>
-                    <span class="text-amber-300">CHỈ TRONG 3 BƯỚC CÙNG AI!</span>
+                    <span class="text-amber-300">CHỈ VỚI BỘ CẨM NANG THỰC CHIẾN!</span>
                 </h2>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-4 text-left">
                     <div class="bg-slate-900 rounded-3xl border-2 border-slate-700 p-6 flex flex-col justify-between">
                         <div>
                             <span class="bg-slate-800 text-sky-300 text-xs font-extrabold px-3 py-1 rounded-full">GÓI 1 • VIP1 STANDARD</span>
                             <div class="text-3xl font-black text-white my-3">99.000đ <span class="text-xs text-slate-400">/ trọn đời</span></div>
-                            <ul class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
+                            <ul class="space-y-2.5 text-xs text-slate-300 pt-3 border-t border-slate-800">
                                 <li>✅ Xem trực tuyến trọn bộ Sổ tay Ebook STEM & AI trên Web.</li>
                                 <li>✅ Truy cập thư viện Prompt Vibe Coding cơ bản.</li>
+                                <li>💡 Phù hợp để trải nghiệm nhanh phương pháp mới.</li>
                             </ul>
                         </div>
-                        <button type="button" onclick="openCheckoutModal(1)" class="mt-6 w-full bg-slate-800 text-white font-black py-3 rounded-2xl text-xs">Chọn Gói 1 (99.000đ)</button>
+                        <button type="button" onclick="openCheckoutModal(1)" class="mt-6 w-full bg-slate-800 hover:bg-slate-700 text-white font-black py-3 rounded-2xl text-xs transition">Chọn Gói 1 (99.000đ)</button>
                     </div>
                     <div class="bg-slate-900 rounded-3xl border-2 border-amber-400 p-6 flex flex-col justify-between relative shadow-xl">
-                        <span class="absolute -top-3.5 right-5 bg-amber-400 text-slate-950 text-[10px] font-black px-3 py-1 rounded-full uppercase">PHỔ BIẾN NHẤT</span>
+                        <span class="absolute -top-3.5 right-5 bg-amber-400 text-slate-950 text-[10px] font-black px-3 py-1 rounded-full uppercase">ĐƯỢC CHỌN NHIỀU NHẤT</span>
                         <div>
                             <span class="bg-amber-400/20 text-amber-300 text-xs font-black px-3 py-1 rounded-full">GÓI 2 • VIP2 PRO COMBO</span>
                             <div class="text-3xl font-black text-amber-400 my-3">199.000đ <span class="text-xs text-slate-400">/ trọn đời</span></div>
-                            <ul class="space-y-2 text-xs text-slate-200 pt-2 border-t border-slate-800">
+                            <ul class="space-y-2.5 text-xs text-slate-200 pt-3 border-t border-slate-800">
                                 <li>✅ Toàn bộ quyền lợi Gói 1 + Tải PDF Xưởng In Workbook chuẩn A4.</li>
                                 <li>✅ Mở khóa 100% Thẻ STEM & Thư viện 30+ Prompt AI nâng cao.</li>
-                                <li>✅ Mở khóa Cổng Đối tác CTV Affiliate (Hoa hồng 40% F1 + 10% F2).</li>
+                                <li>✅ <strong>Đặc quyền CTV:</strong> Mở cổng kinh doanh Affiliate hoa hồng 40% F1.</li>
+                                <li>🔥 <em>Giải pháp toàn diện nhất cho học sinh đi thi!</em></li>
                             </ul>
                         </div>
-                        <button type="button" onclick="openCheckoutModal(2)" class="mt-6 w-full bg-amber-400 text-slate-950 font-black py-3 rounded-2xl text-xs">Chọn Gói 2 Pro Combo (199.000đ)</button>
+                        <button type="button" onclick="openCheckoutModal(2)" class="mt-6 w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-black py-3 rounded-2xl text-xs transition">Chọn Gói 2 Pro Combo (199.000đ)</button>
                     </div>
                     <div class="bg-gradient-to-b from-slate-900 to-indigo-950 rounded-3xl border-4 border-sky-400 p-6 flex flex-col justify-between shadow-2xl">
                         <div>
                             <span class="bg-sky-500 text-slate-950 text-xs font-black px-3 py-1 rounded-full">GÓI 3 • VIP3 PRO MASTER</span>
                             <div class="text-3xl font-black text-emerald-400 my-3">245.000đ <span class="text-xs text-slate-400">/ trọn đời</span></div>
-                            <ul class="space-y-2 text-xs text-slate-200 pt-2 border-t border-slate-800">
+                            <ul class="space-y-2.5 text-xs text-slate-200 pt-3 border-t border-slate-800">
                                 <li>✅ Trọn gói Gói 1 + Gói 2 (Đầy đủ Ebook, Workbook, Prompt AI & Xưởng in).</li>
                                 <li>✅ Kho Video hướng dẫn thực chiến xây dựng đồ án STEM cùng AI.</li>
-                                <li>🎁 Quà tặng vật lý độc quyền cho đội ngũ học sinh tham gia Hackathon.</li>
+                                <li>🎁 Tặng kèm bộ công cụ lập trình mẫu độc quyền cho đội ngũ đi thi.</li>
                             </ul>
                         </div>
-                        <button type="button" onclick="openCheckoutModal(3)" class="mt-6 w-full bg-emerald-600 text-white font-black py-3 rounded-2xl text-xs">Sở Hữu Gói 3 Master (245.000đ)</button>
+                        <button type="button" onclick="openCheckoutModal(3)" class="mt-6 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3 rounded-2xl text-xs transition">Sở Hữu Gói 3 Master (245.000đ)</button>
                     </div>
                 </div>
             </div>
@@ -263,8 +263,8 @@
             <button type="button" onclick="closeCheckoutModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 text-white font-black">✕</button>
             <h3 class="text-base font-black text-amber-300">CỔNG THANH TOÁN VIETQR TỰ ĐỘNG</h3>
             <div class="bg-slate-950 p-4 rounded-2xl text-center space-y-2 border border-slate-800">
-                <div class="text-emerald-400 font-black text-sm" id="checkoutAmountDisplay">245.000 VNĐ</div>
-                <div class="text-xs text-slate-300">Nội dung: <strong class="font-mono bg-amber-400 text-slate-950 px-1 rounded">MVN245</strong></div>
+                <div class="text-emerald-400 font-black text-sm" id="checkoutAmountDisplay">199.000 VNĐ</div>
+                <div class="text-xs text-slate-300">Nội dung: <strong class="font-mono bg-amber-400 text-slate-950 px-1 rounded">MVN199</strong></div>
             </div>
             <button type="button" onclick="closeCheckoutModal(); alert('Đã xác nhận thanh toán!');" class="w-full bg-emerald-600 text-white font-black py-3 rounded-2xl text-xs">✅ Xác Nhận Đã Chuyển Khoản</button>
         </div>
@@ -280,16 +280,15 @@
         </div>
     </div>
 
-    <!-- SCRIPT LOGIC V2 -->
+    <!-- SCRIPT LOGIC V3 -->
     <script>
-        let unlockedVipTier = parseInt(localStorage.getItem('mavina_stem_v2_tier') || '3', 10); // Mặc định mở Full để test
-        const FREE_SAMPLE_IDS = [1, 2, 3];
+        let unlockedVipTier = parseInt(localStorage.getItem('mavina_stem_v2_tier') || '3', 10);
 
         const stemModules = [
-            { id: 1, part: "P1", title: "Săn tìm ý tưởng thực tế (Real-World Impact)", prompt: "Hãy phân tích 5 thử thách STEMPETITION (Green Planet, Healthy Living, Smart Education, Smart Community, Future Technology) và gợi ý 3 đề tài đột phá cho học sinh THCS.", rule: "Quan sát các bất tiện nhỏ trong lớp học hoặc khu phố để biến thành đề tài khả thi.", example: "Vấn đề: Quên tắt điện phòng học ➔ Giải pháp: Lắp cảm biến tự động bằng Arduino/AI." },
-            { id: 2, part: "P2", title: "Bí kíp 'Vibe Coding' cùng AI", prompt: "Bạn là chuyên gia lập trình phần mềm giáo dục. Hãy viết mã nguồn HTML, Tailwind CSS và JavaScript hoàn chỉnh cho một trang web landing page giới thiệu dự án lọc nước thông minh.", rule: "Không cần gõ code thủ công; tập trung mô tả mong muốn bằng ngôn ngữ tự nhiên cho AI.", example: "Yêu cầu AI sinh giao diện ➔ Copy code chạy trực tiếp trên trình duyệt." },
-            { id: 3, part: "P3", title: "Cấu trúc 7 Slide Pitching chuẩn quốc tế", prompt: "Hãy xây dựng nội dung chi tiết cho 7 slide thuyết trình dự án STEM để bảo vệ trước Ban Giám Khảo cuộc thi cấp trường.", rule: "Tuân thủ cấu trúc: Vấn đề ➔ Giải pháp ➔ Công nghệ AI/IoT ➔ Tác động thực tế ➔ Kế hoạch phát triển.", example: "Slide 1: Tên đội & Slogan ➔ Slide 2: Nỗi đau cộng đồng ➔ Slide 3: Giải pháp công nghệ." },
-            { id: 4, part: "P4", title: "Kho tàng công cụ Open-source & IoT", prompt: "Liệt kê 10 công cụ phần mềm miễn phí tốt nhất để học sinh làm mô phỏng 3D và lập trình kéo thả cho đồ án khoa học kỹ thuật.", rule: "Tận dụng tài nguyên mở để tiết kiệm chi phí và tăng tốc độ hoàn thiện sản phẩm.", example: "Sử dụng Tinkercad mô phỏng mạch điện tử hoặc Canva thiết kế poster." }
+            { id: 1, part: "P1", title: "Săn tìm ý tưởng thực tế (Real-World Impact)", prompt: "Hãy phân tích 5 thử thách STEMPETITION (Green Planet, Healthy Living, Smart Education, Smart Community, Future Technology) và gợi ý 3 đề tài đột phá, dễ đo lường tác động thực tế cho học sinh THCS/THPT.", rule: "Quan sát các bất tiện nhỏ trong nhà trường hoặc khu phố để biến thành đề tài khả thi.", example: "Vấn đề: Lãng phí điện phòng học ➔ Giải pháp: Lắp cảm biến tự động bằng Arduino/AI." },
+            { id: 2, part: "P2", title: "Bí kíp 'Vibe Coding' cùng AI", prompt: "Bạn là chuyên gia lập trình phần mềm giáo dục. Hãy viết mã nguồn HTML, Tailwind CSS và JavaScript hoàn chỉnh cho một trang web landing page giới thiệu dự án lọc nước thông minh, giao diện thân thiện với điện thoại di động.", rule: "Không cần gõ code thủ công; tập trung mô tả rõ ràng mong muốn bằng ngôn ngữ tự nhiên cho AI.", example: "Yêu cầu AI sinh giao diện ➔ Copy code chạy trực tiếp trên trình duyệt." },
+            { id: 3, part: "P3", title: "Cấu trúc 7 Slide Pitching chuẩn quốc tế", prompt: "Hãy xây dựng nội dung chi tiết cho 7 slide thuyết trình dự án STEM để bảo vệ trước Ban Giám Khảo cuộc thi cấp trường, ngôn ngữ sắc bén, súc tích và thuyết phục.", rule: "Tuân thủ cấu trúc: Vấn đề ➔ Giải pháp ➔ Công nghệ AI/IoT ➔ Tác động thực tế ➔ Kế hoạch phát triển.", example: "Slide 1: Tên đội & Slogan ➔ Slide 2: Nỗi đau cộng đồng ➔ Slide 3: Giải pháp công nghệ." },
+            { id: 4, part: "P4", title: "Kho tàng công cụ Open-source & IoT", prompt: "Liệt kê 10 công cụ phần mềm miễn phí tốt nhất để học sinh làm mô phỏng 3D và lập trình kéo thả cho đồ án khoa học kỹ thuật, kèm hướng dẫn sử dụng nhanh.", rule: "Tận dụng tài nguyên mở để tiết kiệm chi phí và tăng tốc độ hoàn thiện sản phẩm.", example: "Sử dụng Tinkercad mô phỏng mạch điện tử hoặc Canva thiết kế poster." }
         ];
 
         window.switchTab = function(tabName) {
@@ -312,7 +311,7 @@
                                 <span class="bg-sky-600 text-white text-[11px] font-black px-2.5 py-0.5 rounded-full">MODUL #${String(item.id).padStart(2,'0')} • ${item.part}</span>
                                 <h3 class="text-base font-black text-white mt-2">${item.title}</h3>
                                 <div class="bg-slate-950 border-l-4 border-sky-400 p-2.5 rounded-xl font-mono text-xs text-sky-200 mt-2">
-                                    💡 <strong>Phương pháp thực chiến:</strong> ${item.rule}
+                                    💡 <strong>Phương pháp:</strong> ${item.rule}
                                 </div>
                             </div>
                             <div class="bg-slate-800 border border-sky-400 text-sky-300 rounded-2xl py-2 px-3 text-center text-xs font-black uppercase">
@@ -325,7 +324,7 @@
                                 <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono text-[11px] text-emerald-300">
                                     ${item.prompt}
                                 </div>
-                                <p class="text-xs text-slate-300"><strong>Ví dụ thực tế:</strong> ${item.example}</p>
+                                <p class="text-xs text-slate-300"><strong>Ví dụ:</strong> ${item.example}</p>
                             </div>
                             <button type="button" onclick="event.stopPropagation(); copyTextToClipboard('${item.prompt}', this, '✅ Đã Copy Prompt!');" class="w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-black py-2 rounded-xl text-xs">
                                 📋 Copy Lệnh Prompt Này
@@ -357,8 +356,8 @@
 
         function loadQuizItem() {
             if (quizIdx >= quizQuestions.length) {
-                document.getElementById('quizPromptText.textContent') = "🎉 Hoàn thành xuất sắc thử thách Vibe Coding!";
-                document.getElementById('quizOptionsContainer').innerHTML = '';
+                document.getElementById('quizPromptText').textContent = "🎉 Hoàn thành xuất sắc thử thách Vibe Coding!";
+                document.getElementById('quizOptionsContainer').innerHTML = '<div class="text-center text-xs text-amber-300 font-bold py-4">Bạn đã nắm vững tư duy xử lý sự cố. Hãy sở hữu trọn bộ Ebook để làm chủ 100% kỹ năng Hackathon!</div>';
                 return;
             }
             const q = quizQuestions[quizIdx];
